@@ -23,7 +23,7 @@ This preference table would be represented in the text file as follows:
 
 An example of preference tables for the men and women respectively have been provided in the files 'men_prefs.txt' and 'women_prefs.txt'.
 
-##Matching
+## Matching
 
 In order to check if a matching is stable given a pair of preference tables, a matching is of course required. The relevant program requires that this is given in a text file in a similar manner to the preference tables. Each line in the text file represents a matching. Each line contains two names, separated by a space. The first name in each line is the name of a man, and the second name is the name of his partner. Using the same example as above, suppose we propose the following matching:
 
