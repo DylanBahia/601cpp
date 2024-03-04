@@ -47,14 +47,25 @@ An example of a matching has been provided in the file 'match.txt'.
 ## Output
 The code provides the matching given by the fundamental algorithm and says whether or not the matching is stable.
 ## Compilation
+The C++ to produce this output uses functions contained in three different files. The first file is 'fund_alg_funs.cpp'; this contains the code which performs the fundamental algorithm. To compile this code, enter the following command into the Linux command line:
+
+g++ --std=c++17 -c fund_alg.cpp
+
+The second file is 'is_stable_funs.cpp'; this contains the code which checks if a matching is stable. To compile this code, enter the following command into the Linux command line:
+
+g++ --std=c++17 -c is_stable_funs.cpp
+
+The third file is 'file_to_pref.cpp'; this contains the code which turns the contents of a text document into a preference table. To compile this code, enter the following command into the Linux command line:
+
+g++ --std=c++17 -c file_to_pref.cpp
+
 The C++ code which produces the output is contained in the 'fund_alg.cpp' file. In order to compile the code into an executable program, enter the following command into the Linux command line:
 
-g++ --std=c++17 fund_alg.cpp is_stable_funs.o fund_alg_funs.o file_to_pref.o -o fund_alg.o
+g++ --std=c++17 fund_alg.cpp fund_alg_funs.o is_stable_funs.o file_to_pref.o -o fund_alg.o
 
 This will create the executable file 'fund_alg.o'.
 
 ## Running the code
-
 In order to run the code, first create two files containing the preference tables in the required format. Assuming these are files are named 'men_prefs.txt' and 'women_prefs.txt' (these can be renamed), the fundamental algorithm can be run by entering the following command into the Linux command line:
 
 ./fund_alg.o men_prefs.txt women_prefs.txt
@@ -66,6 +77,8 @@ Here, the mens' preference table is provided first and the womens' preference ta
 Given a matching and a pair of preference tables, the code will say whether or not the matching is stable.
 
 ## Compilation
+The C++ code to produce this output uses functions contained in two different files; 'is_stable_funs.cpp' and 
+
 The C++ code which produces the output is contained in the 'is_stable.cpp' file. In order to compile the code into an executable program, enter the following command into the Linux command line:
 
 g++ --std=c++17 is_stable.cpp is_stable_funs.o file_to_pref.o -o is_stable.o
