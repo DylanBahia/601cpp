@@ -1,5 +1,7 @@
 This repository contains code which can find a stable matching in the stable marriage problem, and code which can check if any proposed matching is stable. All the code in this repository has been written for a C++17 compiler. It is recommended that the entire repository is downloaded before compiling and running any of the code.
 
+If using Linux, open the command line and change the directory to that in which the code has been downloaded. If using Windows, see 'windows.md'.
+
 # Format for preference tables and matching
 ## Preference tables
 
@@ -46,7 +48,8 @@ An example of a matching has been provided in the file 'match.txt'.
 # Fundamental Algorithm
 ## Output
 The code provides the matching given by the fundamental algorithm and says whether or not the matching is stable.
-## Compilation
+## Compilation 
+
 The C++ to produce this output uses functions contained in three different files. The first file is 'fund_alg_funs.cpp'; this contains the code which performs the fundamental algorithm. To compile this code, enter the following command into the Linux command line:
 
 g++ --std=c++17 -c fund_alg.cpp
@@ -77,7 +80,7 @@ Here, the mens' preference table is provided first and the womens' preference ta
 Given a matching and a pair of preference tables, the code will say whether or not the matching is stable.
 
 ## Compilation
-The C++ code to produce this output uses functions contained in two different files; 'is_stable_funs.cpp' and 
+The C++ code to produce this output uses functions contained in two different files; 'is_stable_funs.cpp' and 'file_to_pref.cpp'. See above on how to compile these.
 
 The C++ code which produces the output is contained in the 'is_stable.cpp' file. In order to compile the code into an executable program, enter the following command into the Linux command line:
 
