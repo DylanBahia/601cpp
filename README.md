@@ -59,3 +59,23 @@ In order to run the code, first create two files containing the preference table
 
 ./fund_alg.o men_prefs.txt women_prefs.txt
 
+Here, the mens' preference table is provided first and the womens' preference table second.
+
+# Checking if a matching is stable
+## Output
+Given a matching and a pair of preference tables, the code will say whether or not the matching is stable.
+
+## Compilation
+The C++ code which produces the output is contained in the 'is_stable.cpp' file. In order to compile the code into an executable program, enter the following command into the Linux command line:
+
+g++ --std=c++17 is_stable.cpp is_stable_funs.o file_to_pref.o -o is_stable.o
+
+This will create the exectuable file 'is_stable.o'.
+
+## Running the code
+
+In order to run the code, first create three files, two containing the preference tables and one containing the matching, all in the required format. Assuming these files are named 'men_prefs.txt', 'women_prefs.txt' and 'match.txt' (these can be renamed), the check of stability can be performed by entering the following command into the Linux command line:
+
+./is_stable.o men_prefs.txt women_prefs.txt match.txt
+
+Here, the mens' preference table is provided first, the womens' preference table second and the matching third.
